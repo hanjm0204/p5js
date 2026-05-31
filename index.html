@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My p5.js Creative Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #1e1e2f 0%, #11111b 100%);
+      color: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(45deg, #ff6b6b, #ffbe0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: #a0a0b8;
+      font-size: 1rem;
+    }
+
+    #projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      max-width: 800px;
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 186, 11, 0.5);
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: #ffbe0b;
+      font-weight: 700;
+    }
+
+    .cell {
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    #projects .cell iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 400px;
+      border: none;
+      transform-origin: top left;
+      transform: scale(0.64); 
+    }
+
+    @media (max-width: 650px) {
+      #projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>나의 미디어 아트 포트폴리오</h1>
+    <p class="subtitle">p5.js 코딩으로 구현한 디지털 그래픽 아카이브</p>
+  </header>
+
+  <main id="projects">
+
+    <div class="card">
+      <h2>ASSIGNMENT 1. 정적 추상화 (피자)</h2>
+      <div class="cell">
+        <iframe src="sample1/index.html"></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ASSIGNMENT 4. 인터랙티브/응용 그래픽</h2>
+      <div class="cell">
+        <iframe src="sample4/index.html"></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ASSIGNMENT 2. 동적 애니메이션 (피자 먹방)</h2>
+      <div class="cell">
+        <iframe src="sample2/index.html"></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ASSIGNMENT 3. 반복과 규칙의 예술</h2>
+      <div class="cell">
+        <iframe src="sample3/index.html"></iframe>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
